@@ -17,3 +17,4 @@ if __name__ == "__main__":
     dept = Department("Computer Science", prof)
     dept.display_info()
 
+
