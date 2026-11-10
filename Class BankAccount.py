@@ -1,0 +1,68 @@
+Python Code
+
+python
+
+class BankAccount:
+def init(self, account_number, balance):
+self.__account_number = account_number
+self.__balance = balance
+
+def set_account_number(self, account_number):
+    self.__account_number = account_number
+
+def set_balance(self, balance):
+    if balance >= 0:
+        self.__balance = balance
+    else:
+        print("The balance must be not be a negative number.")
+
+@property
+def account_number(self):
+    return self.__account_number
+
+@property
+def balance(self):
+    return self.__balance
+if name == "main":
+a1 = BankAccount(12345, 1000)
+
+print("Account 1")
+print(f"Account Number: {a1.account_number}")
+print(f"Balance: {a1.balance:.2f}")
+print()
+
+print("Update balance to -100")
+a1.set_balance(-100)
+print(f"Account Number: {a1.account_number}")
+print(f"Balance: {a1.balance:.2f}")
+ 
+
+ 
+
+#Explanation
+
+#Private Attributes
+
+# __account_number  and  __balance  use double underscores so they cannot be accessed or modified directly from outside the class. This protects the data.
+#Setter Methods
+
+# set_account_number()  — allows updating the account number in a controlled way.
+# set_balance()  — checks if the new balance is zero or positive before updating. If the value is negative, it shows a warning and ignores the change.
+#Getter Methods (@Property)
+
+#account_number  and  balance  are read-only properties. You can view their values, but you cannot change them directly. This is the core idea of encapsulation.
+#Formatted Output
+
+#The balance is always displayed with two decimal places using  :.2f  for a clean currency format.
+ 
+
+#Sample Output
+
+#Account 1
+#Account Number: 12345
+#Balance: 1000.00
+
+#Update balance to -100
+#The balance must be not be a negative number.
+#Account Number: 12345
+#Balance: 1000.00
